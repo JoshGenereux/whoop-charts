@@ -1,6 +1,8 @@
+import styles from "./Navbar.module.css";
+
 export default function Navbar() {
   return (
-    <nav className="navbar">
+    <nav className={styles.navbar}>
       <h1>Whoop Charts</h1>
     </nav>
   );
