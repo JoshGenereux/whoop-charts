@@ -1,26 +1,72 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* 1. Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* 2. Remove default margin */
+* {
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* 3. Base body settings */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 4. Remove list styles */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* 5. Reset links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 6. Make images easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Reset form elements */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Prevent text overflow */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Root defaults */
+html,
+body {
+  height: 100%;
+}
+
+/* 10. Optional base styles */
+body {
+  background: #fff;
+  color: #111;
+  font-family: system-ui, sans-serif;
 }
