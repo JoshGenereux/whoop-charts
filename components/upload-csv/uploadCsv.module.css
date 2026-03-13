@@ -1,0 +1,29 @@
+.uploadRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.button {
+  background: rgb(124, 207, 121);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.button:hover {
+  background: rgb(94, 180, 91);
+}
+
+.fileBox {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  min-width: 200px;
+  border-radius: 6px;
+  background: white;
+}
