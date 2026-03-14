@@ -4,8 +4,12 @@ import styles from "./uploadCsv.module.css";
 export default function UploadCSV() {
   const [fileName, setFileName] = useState<string>("Whoop CSV file name...");
 
-  const handleFile = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(event?.target?.value);
+  const handleFile = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    // console.log(event?.target?.files?.[0]);
+    let file = event?.target?.files?.[0];
+    let text = await file?.text();
+
+    console.log(text);
 
     if (event?.target?.value) {
       setFileName(event.target.value);
