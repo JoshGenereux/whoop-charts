@@ -1,4 +1,6 @@
-.uploadRow {
+.uploadContainer {
+  width: 350px;
+  height: 150px;
   display: flex;
   align-items: center;
   gap: 10px;

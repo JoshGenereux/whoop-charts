@@ -14,7 +14,7 @@ export default function UploadCSV() {
   };
 
   return (
-    <div className={styles.uploadRow}>
+    <div className={styles.uploadContainer}>
       <label className={styles.button}>
         Choose CSV
         <input
