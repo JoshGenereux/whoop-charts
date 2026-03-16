@@ -15,11 +15,17 @@ export default function Navbar() {
         <Link className={styles.link} href="/">
           Home
         </Link>
-        <Link className={styles.link} href="/upload">
-          Upload
+        <Link className={styles.link} href="/">
+          Sleep
         </Link>
-        <Link className={styles.link} href="/dashboard">
-          Dashboard
+        <Link className={styles.link} href="/">
+          Workouts
+        </Link>
+        <Link className={styles.link} href="/">
+          Jornal Entries
+        </Link>
+        <Link className={styles.link} href="/">
+          Physiological Cycles
         </Link>
       </div>
     </nav>

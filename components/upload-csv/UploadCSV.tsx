@@ -5,14 +5,11 @@ export default function UploadCSV() {
   const [fileName, setFileName] = useState<string>("Whoop CSV file name...");
 
   const handleFile = async (event: React.ChangeEvent<HTMLInputElement>) => {
-    // console.log(event?.target?.files?.[0]);
     let file = event?.target?.files?.[0];
     let text = await file?.text();
 
-    console.log(text);
-
-    if (event?.target?.value) {
-      setFileName(event.target.value);
+    if (file) {
+      setFileName(file.name);
     }
   };
 
