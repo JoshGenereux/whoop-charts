@@ -1,8 +1,17 @@
 .homePage {
   width: 100%;
   height: 100%;
-  padding-top: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.uploadContainer {
+  width: 500px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

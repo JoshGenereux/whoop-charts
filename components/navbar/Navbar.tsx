@@ -22,10 +22,10 @@ export default function Navbar() {
           Workouts
         </Link>
         <Link className={styles.link} href="/">
-          Jornal Entries
+          Journals
         </Link>
         <Link className={styles.link} href="/">
-          Physiological Cycles
+          Cycles
         </Link>
       </div>
     </nav>
