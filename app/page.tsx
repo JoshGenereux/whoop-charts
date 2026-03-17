@@ -10,7 +10,7 @@ export default function Home() {
       <div className={styles.circlesContainer}>
         <ProgressCircle percentage="75" progressColor="lightBlue" />
         <ProgressCircle percentage="82" progressColor="green" />
-        <ProgressCircle percentage="67" progressColor="blue" />
+        <ProgressCircle percentage="17" progressColor="blue" />
       </div>
       <UploadCSV />
     </div>
