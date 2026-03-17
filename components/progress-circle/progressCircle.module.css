@@ -1,27 +1,23 @@
 .progressCircle {
   width: 400px;
   height: 400px;
-  /* border: 25px rgba(103, 104, 106, 0.368) solid; */
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(103, 104, 106, 0.368);
-
-  &[data-innercirclecolor] {
-  }
 }
 
 .innerCircle {
   position: absolute;
-  width: 370px;
-  height: 370px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   background-color: rgb(45, 46, 55);
 }
 
 .percentage {
   position: relative;
-  font-size: 50px;
+  font-size: 100px;
   color: rgba(234, 232, 232, 0.8);
 }

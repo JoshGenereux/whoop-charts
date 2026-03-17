@@ -20,6 +20,13 @@ export default function ProgressCircle({
   const precentageRef = useRef(null);
   const innerCircleRef = useRef(null);
 
+  const progressStyle = {
+    background: `conic-gradient(
+    ${progressColor} 0deg ${value * 3.6}deg,
+    rgba(103, 104, 106, 0.368) ${value * 3.6}deg 360deg
+  )`,
+  };
+
   useEffect(() => {
     let start = 0;
 
@@ -31,7 +38,7 @@ export default function ProgressCircle({
       if (start >= endValue) {
         clearInterval(interval);
       }
-    }, 50);
+    }, 25);
   }, [endValue]);
 
   return (
@@ -42,6 +49,7 @@ export default function ProgressCircle({
       data-percentage={percentage}
       data-backgroundcolor={backgroundColor}
       data-progresscolor={progressColor}
+      style={progressStyle}
     >
       <div className={styles.innerCircle} ref={innerCircleRef}></div>
       <div className={styles.percentage} ref={precentageRef}>
