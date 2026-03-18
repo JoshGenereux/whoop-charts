@@ -1,50 +1,62 @@
 .uploadContainer {
-  width: 425px;
-  height: 125px;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: space-between;
-  /* gap: 10px; */
+  gap: 12px;
+  align-items: center;
 }
 
-.hiddenInput {
-  display: none;
-}
-
-.browseButton {
-  background: rgb(124, 207, 121);
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-
-  &:hover {
-    background: rgb(68, 142, 65);
-  }
-}
-
-.removeButton {
-  background: rgb(249, 69, 69);
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-
-  &:hover {
-    background: rgb(203, 31, 31);
-  }
-}
-
-.fileName {
+/* Button */
+.button {
+  position: relative;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
   color: white;
-  /* max-width: 175px; */
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
+}
+
+.clear {
+  position: relative;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #bd1d1d, #f33636);
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.clear:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
+}
+
+.button input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .fileBox {
-  border: 1px solid #ccc;
-  padding: 8px 12px;
-  min-width: 200px;
-  border-radius: 6px;
-  background: white;
+  width: 300px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #2d2e37;
+  color: #cbd5e1;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
 }

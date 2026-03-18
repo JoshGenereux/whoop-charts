@@ -13,9 +13,7 @@ export default function Home() {
         <ProgressCircle percentage="52" progressColor="rgb(71, 108, 229)" />
       </div>
 
-      <div className={styles.info}>
-        Choose a csv folder OR a single csv from whoop!
-      </div>
+      <div className={styles.info}>Choose a csv folder from whoop!</div>
 
       <UploadCSV />
     </div>
