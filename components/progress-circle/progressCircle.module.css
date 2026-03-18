@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(103, 104, 106, 0.368);
+  transition: background 0.1s linear;
 }
 
 .innerCircle {

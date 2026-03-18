@@ -10,9 +10,14 @@ export default function Home() {
       <div className={styles.circlesContainer}>
         <ProgressCircle percentage="75" progressColor="rgb(129, 188, 215)" />
         <ProgressCircle percentage="96" progressColor="rgb(85, 191, 90)" />
-        <ProgressCircle percentage="52" progressColor="rgb(193, 205, 110)" />
+        <ProgressCircle percentage="52" progressColor="rgb(71, 108, 229)" />
       </div>
+
       <UploadCSV />
+
+      <div className={styles.info}>
+        Choose a csv folder OR a single csv from whoop!
+      </div>
     </div>
   );
 }
