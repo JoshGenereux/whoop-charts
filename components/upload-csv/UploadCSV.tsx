@@ -49,33 +49,10 @@ export default function UploadCSV() {
               Remove
             </button>
           </div>
-          <ProgressBar style={styles.progressBarBackgroundColor} />
+
+          <ProgressBar />
         </>
       )}
     </CSVReader>
   );
-
-  // return (
-  //   <div className={styles.uploadContainer}>
-  //     <CSVReader
-  //       onUploadAccepted={(results: any) => {
-  //         console.log("---------------------------");
-  //         console.log(results);
-  //         console.log("---------------------------");
-  //       }}
-  //     >
-  //       <label className={styles.button}>
-  //         Choose CSV
-  //         <input
-  //           type="file"
-  //           accept=".csv"
-  //           onChange={handleFile}
-  //           className={styles.hiddenInput}
-  //         />
-  //       </label>
-
-  //       <div className={styles.fileBox}>{fileName}</div>
-  //     </CSVReader>
-  //   </div>
-  // );
 }
