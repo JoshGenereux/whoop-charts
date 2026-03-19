@@ -1,17 +1,12 @@
-import { createContext, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import styles from "./uploadCsv.module.css";
-
-export const FileContext = createContext<File[]>([]);
+import { useFiles } from "@/context/FileContext";
 
 export default function UploadCSV() {
   const [folderName, setFolderName] = useState<string>("Whoop folder...");
-  const [files, setFiles] = useState<File[]>([]);
+  const [allFiles, setAllFiles] = useState<File[]>([]);
   const inputRef = useRef<HTMLInputElement | null>(null);
-
-  const setName = (file: File) => {
-    let folder = file.webkitRelativePath.split("/")[0];
-    setFolderName(folder);
-  };
+  const { setFiles } = useFiles();
 
   const handleFolder = (event: React.ChangeEvent<HTMLInputElement>) => {
     const fileList = event.target.files;
@@ -19,15 +14,17 @@ export default function UploadCSV() {
     if (!fileList) return;
 
     const filesArray = Array.from(fileList);
+    setAllFiles(filesArray);
     setFiles(filesArray);
 
     for (const file of filesArray) {
-      setName(file);
+      let folder = file.webkitRelativePath.split("/")[0];
+      setFolderName(folder);
     }
   };
 
   const handleClear = () => {
-    setFiles([]);
+    setAllFiles([]);
     setFolderName("Whoop folder...");
 
     if (inputRef.current) {

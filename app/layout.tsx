@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar/Navbar";
 import "../styles/globals.css";
+import { FileProvider } from "@/context/FileContext";
 
 export default function RootLayout({
   children,
@@ -10,7 +11,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        {children}
+        <FileProvider>{children}</FileProvider>
       </body>
     </html>
   );

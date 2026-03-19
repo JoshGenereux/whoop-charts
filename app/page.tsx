@@ -1,16 +1,11 @@
 "use client";
 
-import UploadCSV, { FileContext } from "@/components/upload-csv/UploadCSV";
+import UploadCSV from "@/components/upload-csv/UploadCSV";
 import styles from "./page.module.css";
 import ProgressCircle from "@/components/progress-circle/ProgressCircle";
 import { useContext, useState } from "react";
 
 export default function Home() {
-  const files = useContext(FileContext);
-  // const [files, setFiles] = useState<File[]>([]);
-
-  console.log(files);
-
   return (
     <div className={styles.homePage}>
       <div className={styles.circlesContainer}>
