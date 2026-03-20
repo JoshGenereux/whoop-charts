@@ -4,7 +4,7 @@ import { useFiles } from "@/context/FileContext";
 
 export default function UploadCSV() {
   const [folderName, setFolderName] = useState<string>("Whoop folder...");
-  const [allFiles, setAllFiles] = useState<File[]>([]);
+  // const [allFiles, setAllFiles] = useState<File[]>([]);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const { setFiles } = useFiles();
 
@@ -14,7 +14,7 @@ export default function UploadCSV() {
     if (!fileList) return;
 
     const filesArray = Array.from(fileList);
-    setAllFiles(filesArray);
+    // setAllFiles(filesArray);
     setFiles(filesArray);
 
     for (const file of filesArray) {
@@ -24,7 +24,7 @@ export default function UploadCSV() {
   };
 
   const handleClear = () => {
-    setAllFiles([]);
+    // setAllFiles([]);
     setFolderName("Whoop folder...");
 
     if (inputRef.current) {

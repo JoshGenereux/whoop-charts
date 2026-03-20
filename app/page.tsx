@@ -3,7 +3,6 @@
 import UploadCSV from "@/components/upload-csv/UploadCSV";
 import styles from "./page.module.css";
 import ProgressCircle from "@/components/progress-circle/ProgressCircle";
-import { useContext, useState } from "react";
 
 export default function Home() {
   return (
