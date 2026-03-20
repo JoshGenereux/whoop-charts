@@ -1,6 +1,6 @@
 import Navbar from "@/components/navbar/Navbar";
 import "../styles/globals.css";
-import { FileProvider } from "@/context/FileContext";
+import Providers from "./providers";
 
 export default function RootLayout({
   children,
@@ -10,8 +10,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <FileProvider>{children}</FileProvider>
+        <Providers>
+          <Navbar />
+          {children}
+        </Providers>
       </body>
     </html>
   );

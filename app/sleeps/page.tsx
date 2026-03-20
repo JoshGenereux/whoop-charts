@@ -1,3 +1,5 @@
+"use client";
+
 import { useFiles } from "@/context/FileContext";
 import styles from "./sleeps.module.css";
 
